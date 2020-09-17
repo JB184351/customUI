@@ -12,6 +12,5 @@ struct Settings {
     var title: String
     var titleDetails: String?
     var settingStatus: String
-    var sectionTitle: String?
     var action: () -> Void
 }

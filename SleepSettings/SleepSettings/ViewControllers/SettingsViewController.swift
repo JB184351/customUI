@@ -25,27 +25,27 @@ class SettingsViewController: UIViewController {
 
 
     func createSettingObjects() {
-        let wakeupTime = Settings(title: "Wakeup Time", titleDetails: "What time should you wake up?", settingStatus: "7:30 AM", sectionTitle: nil) {
+        let wakeupTime = Settings(title: "Wakeup Time", titleDetails: "What time should you wake up?", settingStatus: "7:30 AM") {
             print("Let's wake up!")
         }
         
-        let sleepAlarmSettings = Settings(title: "Sleep Alarm Settings", titleDetails: nil, settingStatus: "On", sectionTitle: nil) {
+        let sleepAlarmSettings = Settings(title: "Sleep Alarm Settings", titleDetails: nil, settingStatus: "On") {
             print("Toggle Setting")
         }
         
-        let dreamScape = Settings(title: "Dreamscape", titleDetails: "What music would you like to hear", settingStatus: "Random", sectionTitle: nil) {
+        let dreamScape = Settings(title: "Dreamscape", titleDetails: "What music would you like to hear", settingStatus: "Random") {
             print("Toggle Dreamscape settings")
         }
         
-        let narration = Settings(title: "Narration", titleDetails: "What narraion would you like to hear?", settingStatus: "Classic Pzizz Sleep", sectionTitle: nil) {
+        let narration = Settings(title: "Narration", titleDetails: "What narraion would you like to hear?", settingStatus: "Classic Pzizz Sleep") {
             print("Change narration setings")
         }
         
-        let voice = Settings(title: "Voice", titleDetails: "Which voice would you like to hear?", settingStatus: "Bethany", sectionTitle: nil) {
+        let voice = Settings(title: "Voice", titleDetails: "Which voice would you like to hear?", settingStatus: "Bethany") {
             print("Change voice settings")
         }
         
-        let music = Settings(title: "Music fade out", titleDetails: "Amount of time before music fades out", settingStatus: "1hr 20min", sectionTitle: nil) {
+        let music = Settings(title: "Music fade out", titleDetails: "Amount of time before music fades out", settingStatus: "1hr 20min") {
             print("Fade out setings")
         }
         
