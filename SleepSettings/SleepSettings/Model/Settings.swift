@@ -11,6 +11,7 @@ import Foundation
 struct Settings {
     var title: String
     var titleDetails: String?
-    var settingStatus: String
+    var settingStatus: String?
+    var cellType: CellType
     var action: () -> Void
 }
