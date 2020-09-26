@@ -20,7 +20,7 @@
 		30DDC1C2250D35B300E606C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30DDC1C1250D35B300E606C8 /* Assets.xcassets */; };
 		30DDC1C5250D35B300E606C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30DDC1C3250D35B300E606C8 /* LaunchScreen.storyboard */; };
 		30DDC1CF250D36C000E606C8 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDC1CE250D36C000E606C8 /* Settings.swift */; };
-		30DDC1D4250D3D2000E606C8 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDC1D2250D3D2000E606C8 /* SettingsTableViewCell.swift */; };
+		30DDC1D4250D3D2000E606C8 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDC1D2250D3D2000E606C8 /* SettingsCell.swift */; };
 		30DDC1D5250D3D2000E606C8 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DDC1D3250D3D2000E606C8 /* SettingsCell.xib */; };
 		30ED4D482512FC3200D7D5DF /* cellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ED4D472512FC3200D7D5DF /* cellType.swift */; };
 		30ED4D4B2512FE8F00D7D5DF /* SwitchSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ED4D492512FE8F00D7D5DF /* SwitchSettingsCell.swift */; };
@@ -43,7 +43,7 @@
 		30DDC1C4250D35B300E606C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30DDC1C6250D35B300E606C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30DDC1CE250D36C000E606C8 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		30DDC1D2250D3D2000E606C8 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsTableViewCell.swift; path = SleepSettings/SettingsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		30DDC1D2250D3D2000E606C8 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsCell.swift; path = SleepSettings/SettingsCell.swift; sourceTree = SOURCE_ROOT; };
 		30DDC1D3250D3D2000E606C8 /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsCell.xib; path = SleepSettings/SettingsCell.xib; sourceTree = SOURCE_ROOT; };
 		30ED4D472512FC3200D7D5DF /* cellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellType.swift; sourceTree = "<group>"; };
 		30ED4D492512FE8F00D7D5DF /* SwitchSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchSettingsCell.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 				30AAFABB2516728400B23464 /* CollectionViewCell.xib */,
 				30ED4D492512FE8F00D7D5DF /* SwitchSettingsCell.swift */,
 				30ED4D4A2512FE8F00D7D5DF /* SwitchSettingsCell.xib */,
-				30DDC1D2250D3D2000E606C8 /* SettingsTableViewCell.swift */,
+				30DDC1D2250D3D2000E606C8 /* SettingsCell.swift */,
 				30DDC1D3250D3D2000E606C8 /* SettingsCell.xib */,
 				3085491525119FA000D667B6 /* CustomHeaderTableViewCell.swift */,
 				3085491625119FA000D667B6 /* CustomHeaderTableViewCell.xib */,
@@ -202,7 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30DDC1D4250D3D2000E606C8 /* SettingsTableViewCell.swift in Sources */,
+				30DDC1D4250D3D2000E606C8 /* SettingsCell.swift in Sources */,
 				30DDC1CF250D36C000E606C8 /* Settings.swift in Sources */,
 				30DDC1BA250D35B100E606C8 /* SecondViewController.swift in Sources */,
 				30ED4D4B2512FE8F00D7D5DF /* SwitchSettingsCell.swift in Sources */,

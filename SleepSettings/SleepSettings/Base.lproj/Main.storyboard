@@ -20,24 +20,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0lF-2n-sZu">
                                 <rect key="frame" x="0.0" y="84" width="414" height="729"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="CRZ-HA-de8"/>
-                                    <constraint firstAttribute="height" constant="729" id="ulH-xV-2QX"/>
-                                </constraints>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g97-ZG-gl1">
                                 <rect key="frame" x="20" y="44" width="374" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="X0X-Ym-ULY"/>
-                                    <constraint firstAttribute="height" constant="21" id="tQ1-UO-Tse"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.066666666666666666" green="0.086274509803921567" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0lF-2n-sZu" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="BIi-Wg-7cJ"/>
                             <constraint firstItem="0lF-2n-sZu" firstAttribute="top" secondItem="g97-ZG-gl1" secondAttribute="bottom" constant="19" id="OSH-gL-2KR"/>

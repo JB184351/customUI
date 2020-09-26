@@ -5,55 +5,58 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsCell" id="KGk-i7-Jjw" customClass="SettingsTableViewCell" customModule="SleepSettings" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsCell" id="KGk-i7-Jjw" customClass="SettingsCell" customModule="SleepSettings" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="euv-Cy-Z7a">
-                        <rect key="frame" x="8" y="16" width="305" height="22.5"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="euv-Cy-Z7a">
+                        <rect key="frame" x="8" y="0.0" width="304" height="44"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="222" translatesAutoresizingMaskIntoConstraints="NO" id="v5E-bR-x7u" userLabel="MainLabelStackView">
-                                <rect key="frame" x="0.0" y="0.0" width="305" height="10.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="v5E-bR-x7u" userLabel="MainLabelStackView">
+                                <rect key="frame" x="0.0" y="0.0" width="304" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJb-Jq-8fD">
-                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="10.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpo-MJ-xqc">
-                                        <rect key="frame" x="263.5" y="0.0" width="41.5" height="10.5"/>
+                                        <rect key="frame" x="262.5" y="0.0" width="41.5" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.76078431372549016" green="0.6705882352941176" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Paf-bV-pHx" userLabel="subHeadingLabel">
-                                <rect key="frame" x="0.0" y="10.5" width="26.5" height="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Paf-bV-pHx" userLabel="subHeadingLabel">
+                                <rect key="frame" x="0.0" y="32" width="304" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                     </stackView>
                 </subviews>
+                <color key="backgroundColor" red="0.066666666666666666" green="0.086274509803921567" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstItem="euv-Cy-Z7a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="FOG-wi-6YJ"/>
-                    <constraint firstAttribute="bottom" secondItem="euv-Cy-Z7a" secondAttribute="bottom" constant="5.5" id="ZO8-cs-tV5"/>
-                    <constraint firstItem="euv-Cy-Z7a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Zp7-Bi-T47"/>
-                    <constraint firstAttribute="trailing" secondItem="euv-Cy-Z7a" secondAttribute="trailing" constant="7" id="clo-kd-w7y"/>
+                    <constraint firstAttribute="trailing" secondItem="euv-Cy-Z7a" secondAttribute="trailing" constant="8" id="0gv-vn-Gif"/>
+                    <constraint firstItem="euv-Cy-Z7a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="PVD-gk-5Ck"/>
+                    <constraint firstItem="euv-Cy-Z7a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dPa-jL-0ee"/>
+                    <constraint firstAttribute="bottom" secondItem="euv-Cy-Z7a" secondAttribute="bottom" id="o90-Jd-NNo"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.066666666669999999" green="0.086274509799999996" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="detailSettingsLabel" destination="Paf-bV-pHx" id="p9e-FD-QEW"/>
                 <outlet property="settingsLabel" destination="eJb-Jq-8fD" id="3mg-Fl-K6M"/>

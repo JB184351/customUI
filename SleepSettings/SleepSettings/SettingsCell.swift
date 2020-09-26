@@ -1,18 +1,18 @@
 //
-//  SwitchSetingsCell.swift
+//  SettingsCell.swift
 //  SleepSettings
 //
-//  Created by Justin Bengtson on 9/16/20.
+//  Created by Justin Bengtson on 9/12/20.
 //  Copyright © 2020 Justin Bengtson. All rights reserved.
 //
 
 import UIKit
 
-class SwitchSettingsCell: UITableViewCell {
-    
+class SettingsCell: UITableViewCell {
+
     @IBOutlet var settingsLabel: UILabel!
     @IBOutlet var detailSettingsLabel: UILabel!
-    @IBOutlet var settingsswitch: UISwitch!
+    @IBOutlet var statusLabel: UILabel!
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -21,8 +21,10 @@ class SwitchSettingsCell: UITableViewCell {
     }
     
     func setup(with model: Settings) {
+        
         settingsLabel.text = model.setting
         detailSettingsLabel.text = model.settingDetails
+        statusLabel.text = model.settingStatus! + " >"
     }
     
 }
