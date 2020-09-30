@@ -14,12 +14,6 @@ class SettingsCell: UITableViewCell {
     @IBOutlet var detailSettingsLabel: UILabel!
     @IBOutlet var statusLabel: UILabel!
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 8, right: 0))
-    }
-    
     func setup(with model: Settings) {
         
         settingsLabel.text = model.setting

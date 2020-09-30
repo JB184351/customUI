@@ -11,4 +11,5 @@ import Foundation
 enum CellType {
     case button
     case label
+    case collectionView
 }

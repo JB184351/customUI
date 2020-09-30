@@ -11,8 +11,7 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
-    var settings = [Settings]()
-    
+    var settings = [[SettingsProtocol]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +25,8 @@ class SettingsViewController: UIViewController {
     
     
     func createSettingObjects() {
+        let collectionViewCell = SettingsCollectionView(cellType: .label)
+        
         let wakeupTime = Settings(setting: "Wakeup Time", settingDetails: "What time should you wake up?", settingStatus: "7:30 AM", cellType: .label) {
             print("Let's wake up!")
         }
@@ -82,20 +83,14 @@ class SettingsViewController: UIViewController {
             print("Audio Fusion")
         }
             
-        settings.append(wakeupTime)
-        settings.append(sleepAlarmSettings)
-        settings.append(dreamScape)
-        settings.append(narration)
-        settings.append(voice)
-        settings.append(loop)
-        settings.append(music)
-        settings.append(voiceFade)
-        settings.append(musicWakeup)
-        settings.append(threeDeeVoice)
-        settings.append(threeDeeVoiceSpeed)
-        settings.append(delayStart)
-        settings.append(ratings)
-        settings.append(audioFusion)
+        let firstSection = [wakeupTime, sleepAlarmSettings]
+        settings.append(firstSection)
+        
+        let secondSection = [dreamScape, narration, voice, loop, music, voiceFade, musicWakeup, threeDeeVoice, threeDeeVoiceSpeed, delayStart]
+        settings.append(secondSection)
+        
+        let thirdSection = [ratings, audioFusion]
+        settings.append(thirdSection)
     }
 }
 
@@ -106,12 +101,11 @@ extension SettingsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return settings.count
+        return settings[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let setting = settings[indexPath.row]
+        let setting = settings[indexPath.section][indexPath.row] as! Settings
         
         switch setting.cellType {
         case .button:
@@ -122,17 +116,21 @@ extension SettingsViewController: UITableViewDataSource {
             let settingsCell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath) as! SettingsCell
             settingsCell.setup(with: setting)
             return settingsCell
+        case .collectionView:
+//            let collectionViewCell = tableView.dequeueReusableCell(withIdentifier: <#T##String#>)
+            print("CollectionView")
         }
+        
+        return UITableViewCell()
     }
     
 }
 
 extension SettingsViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let index = indexPath.row
-        
-        let selectedSetting = settings[index].action
-        
+        let setting = settings[indexPath.section][indexPath.row] as! Settings
+        let selectedSetting = setting.action
         selectedSetting()
     }
     

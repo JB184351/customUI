@@ -8,10 +8,18 @@
 
 import Foundation
 
-struct Settings {
+protocol SettingsProtocol {
+    var cellType: CellType { get set }
+}
+
+struct Settings: SettingsProtocol {
     var setting: String
     var settingDetails: String?
     var settingStatus: String?
     var cellType: CellType
     var action: () -> Void
+}
+
+struct SettingsCollectionView: SettingsProtocol {
+    var cellType: CellType
 }
