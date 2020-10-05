@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		303B0AA12528F6BC00F336E8 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B0AA02528F6BC00F336E8 /* Favorites.swift */; };
 		3085491725119FA000D667B6 /* CustomHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085491525119FA000D667B6 /* CustomHeaderTableViewCell.swift */; };
 		3085491825119FA000D667B6 /* CustomHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3085491625119FA000D667B6 /* CustomHeaderTableViewCell.xib */; };
+		30B596732524C721000C0EA5 /* SettingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B596712524C721000C0EA5 /* SettingsCollectionViewCell.swift */; };
+		30B596742524C721000C0EA5 /* SettingsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B596722524C721000C0EA5 /* SettingsCollectionViewCell.xib */; };
+		30B596782524C73E000C0EA5 /* SettingsCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B596762524C73E000C0EA5 /* SettingsCustomCell.swift */; };
+		30B596792524C73E000C0EA5 /* SettingsCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B596772524C73E000C0EA5 /* SettingsCustomCell.xib */; };
 		30DDC1B4250D35B100E606C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDC1B3250D35B100E606C8 /* AppDelegate.swift */; };
 		30DDC1B6250D35B100E606C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDC1B5250D35B100E606C8 /* SceneDelegate.swift */; };
 		30DDC1B8250D35B100E606C8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDC1B7250D35B100E606C8 /* SettingsViewController.swift */; };
@@ -26,8 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		303B0AA02528F6BC00F336E8 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		3085491525119FA000D667B6 /* CustomHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		3085491625119FA000D667B6 /* CustomHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		30B596712524C721000C0EA5 /* SettingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsCollectionViewCell.swift; path = SleepSettings/SettingsCell/SettingsCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		30B596722524C721000C0EA5 /* SettingsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsCollectionViewCell.xib; path = SleepSettings/SettingsCell/SettingsCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		30B596762524C73E000C0EA5 /* SettingsCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCustomCell.swift; sourceTree = "<group>"; };
+		30B596772524C73E000C0EA5 /* SettingsCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCustomCell.xib; sourceTree = "<group>"; };
 		30DDC1B0250D35B100E606C8 /* SleepSettings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepSettings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30DDC1B3250D35B100E606C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30DDC1B5250D35B100E606C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +112,7 @@
 		30DDC1CD250D36A000E606C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				303B0AA02528F6BC00F336E8 /* Favorites.swift */,
 				30DDC1CE250D36C000E606C8 /* Settings.swift */,
 				30ED4D472512FC3200D7D5DF /* cellType.swift */,
 			);
@@ -111,6 +122,10 @@
 		30DDC1D6250D3D2B00E606C8 /* SettingsCell */ = {
 			isa = PBXGroup;
 			children = (
+				30B596712524C721000C0EA5 /* SettingsCollectionViewCell.swift */,
+				30B596722524C721000C0EA5 /* SettingsCollectionViewCell.xib */,
+				30B596762524C73E000C0EA5 /* SettingsCustomCell.swift */,
+				30B596772524C73E000C0EA5 /* SettingsCustomCell.xib */,
 				30ED4D492512FE8F00D7D5DF /* SwitchSettingsCell.swift */,
 				30ED4D4A2512FE8F00D7D5DF /* SwitchSettingsCell.xib */,
 				30DDC1D2250D3D2000E606C8 /* SettingsCell.swift */,
@@ -182,7 +197,9 @@
 				3085491825119FA000D667B6 /* CustomHeaderTableViewCell.xib in Resources */,
 				30DDC1C5250D35B300E606C8 /* LaunchScreen.storyboard in Resources */,
 				30DDC1C2250D35B300E606C8 /* Assets.xcassets in Resources */,
+				30B596742524C721000C0EA5 /* SettingsCollectionViewCell.xib in Resources */,
 				30DDC1D5250D3D2000E606C8 /* SettingsCell.xib in Resources */,
+				30B596792524C73E000C0EA5 /* SettingsCustomCell.xib in Resources */,
 				30DDC1BD250D35B100E606C8 /* Main.storyboard in Resources */,
 				30ED4D4C2512FE8F00D7D5DF /* SwitchSettingsCell.xib in Resources */,
 			);
@@ -200,11 +217,14 @@
 				30DDC1BA250D35B100E606C8 /* SecondViewController.swift in Sources */,
 				30ED4D4B2512FE8F00D7D5DF /* SwitchSettingsCell.swift in Sources */,
 				30ED4D482512FC3200D7D5DF /* cellType.swift in Sources */,
+				30B596732524C721000C0EA5 /* SettingsCollectionViewCell.swift in Sources */,
 				30DDC1B8250D35B100E606C8 /* SettingsViewController.swift in Sources */,
 				3085491725119FA000D667B6 /* CustomHeaderTableViewCell.swift in Sources */,
 				30DDC1C0250D35B100E606C8 /* SleepSettings.xcdatamodeld in Sources */,
+				30B596782524C73E000C0EA5 /* SettingsCustomCell.swift in Sources */,
 				30DDC1B4250D35B100E606C8 /* AppDelegate.swift in Sources */,
 				30DDC1B6250D35B100E606C8 /* SceneDelegate.swift in Sources */,
+				303B0AA12528F6BC00F336E8 /* Favorites.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

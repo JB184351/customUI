@@ -21,5 +21,7 @@ struct Settings: SettingsProtocol {
 }
 
 struct SettingsCollectionView: SettingsProtocol {
+    var title: String?
     var cellType: CellType
+    var action: () -> Void?
 }

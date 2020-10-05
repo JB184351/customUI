@@ -20,12 +20,13 @@ class SettingsViewController: UIViewController {
         tableView.register(UINib(nibName: "SettingsCell", bundle: nil), forCellReuseIdentifier: "SettingsCell")
         tableView.register(UINib(nibName: "CustomHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "headerCell")
         tableView.register(UINib(nibName: "SwitchSettingsCell", bundle: nil), forCellReuseIdentifier: "switchCell")
+        tableView.register(UINib(nibName: "SettingsCustomCell", bundle: nil), forCellReuseIdentifier: "favoritesCell")
         createSettingObjects()
     }
     
     
     func createSettingObjects() {
-        let collectionViewCell = SettingsCollectionView(cellType: .label)
+//        let collectionViewCell =
         
         let wakeupTime = Settings(setting: "Wakeup Time", settingDetails: "What time should you wake up?", settingStatus: "7:30 AM", cellType: .label) {
             print("Let's wake up!")
@@ -82,7 +83,10 @@ class SettingsViewController: UIViewController {
         let audioFusion = Settings(setting: "Audio Fusion", settingDetails: "Allow Pzizz to play in the background while other audio plays", settingStatus: nil, cellType: .button) {
             print("Audio Fusion")
         }
-            
+        
+//        let zeroSection = [collectionViewCell]
+//        settings.append(zeroSection)
+        
         let firstSection = [wakeupTime, sleepAlarmSettings]
         settings.append(firstSection)
         
@@ -97,7 +101,7 @@ class SettingsViewController: UIViewController {
 extension SettingsViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -105,23 +109,21 @@ extension SettingsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let setting = settings[indexPath.section][indexPath.row] as! Settings
+        let setting = settings[indexPath.section][indexPath.row]
         
         switch setting.cellType {
         case .button:
             let buttonTypeCell = tableView.dequeueReusableCell(withIdentifier: "switchCell", for: indexPath) as! SwitchSettingsCell
-            buttonTypeCell.setup(with: setting)
+            buttonTypeCell.setup(with: setting as! Settings)
             return buttonTypeCell
         case .label:
             let settingsCell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath) as! SettingsCell
-            settingsCell.setup(with: setting)
+            settingsCell.setup(with: setting as! Settings)
             return settingsCell
         case .collectionView:
-//            let collectionViewCell = tableView.dequeueReusableCell(withIdentifier: <#T##String#>)
-            print("CollectionView")
+            let collectionViewCell = tableView.dequeueReusableCell(withIdentifier: "favoritesCell") as! SettingsCustomCell
+            return collectionViewCell
         }
-        
-        return UITableViewCell()
     }
     
 }
@@ -137,15 +139,15 @@ extension SettingsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         switch section {
-        case 0:
+        case 1:
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! CustomHeaderTableViewCell
             headerCell.sectionHeaderLabel.text = "Alarm Settings"
             return headerCell
-        case 1:
+        case 2:
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! CustomHeaderTableViewCell
             headerCell.sectionHeaderLabel.text = "Sleep Settings"
             return headerCell
-        case 2:
+        case 3:
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! CustomHeaderTableViewCell
             headerCell.sectionHeaderLabel.text = "General Settings"
             return headerCell
@@ -155,7 +157,12 @@ extension SettingsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50.0
+        switch section {
+        case 0:
+            return 0.0
+        default:
+            return 50.0
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
