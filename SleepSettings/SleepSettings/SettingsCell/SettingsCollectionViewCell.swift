@@ -12,9 +12,7 @@ class SettingsCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var favoritesLabel: UILabel!
     
-    
     func setup(with model: SettingsCollectionView) {
         favoritesLabel.text = model.title
     }
-
 }

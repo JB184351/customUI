@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		303B0AA12528F6BC00F336E8 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B0AA02528F6BC00F336E8 /* Favorites.swift */; };
 		3085491725119FA000D667B6 /* CustomHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085491525119FA000D667B6 /* CustomHeaderTableViewCell.swift */; };
 		3085491825119FA000D667B6 /* CustomHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3085491625119FA000D667B6 /* CustomHeaderTableViewCell.xib */; };
 		30B596732524C721000C0EA5 /* SettingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B596712524C721000C0EA5 /* SettingsCollectionViewCell.swift */; };
@@ -31,7 +30,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		303B0AA02528F6BC00F336E8 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		3085491525119FA000D667B6 /* CustomHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		3085491625119FA000D667B6 /* CustomHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		30B596712524C721000C0EA5 /* SettingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsCollectionViewCell.swift; path = SleepSettings/SettingsCell/SettingsCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -112,7 +110,6 @@
 		30DDC1CD250D36A000E606C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				303B0AA02528F6BC00F336E8 /* Favorites.swift */,
 				30DDC1CE250D36C000E606C8 /* Settings.swift */,
 				30ED4D472512FC3200D7D5DF /* cellType.swift */,
 			);
@@ -224,7 +221,6 @@
 				30B596782524C73E000C0EA5 /* SettingsCustomCell.swift in Sources */,
 				30DDC1B4250D35B100E606C8 /* AppDelegate.swift in Sources */,
 				30DDC1B6250D35B100E606C8 /* SceneDelegate.swift in Sources */,
-				303B0AA12528F6BC00F336E8 /* Favorites.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

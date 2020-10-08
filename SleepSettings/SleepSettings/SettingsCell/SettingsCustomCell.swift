@@ -26,9 +26,10 @@ class SettingsCustomCell: UITableViewCell {
                 print("User Input")
             }
             self.favorites.append(newFavorite)
+            self.collectionView.reloadData()
             return ()
         }
-        
+
         favorites.append(addNewFavorite)
     }
     
@@ -43,29 +44,27 @@ extension SettingsCustomCell: UICollectionViewDataSource {
         let favorite = favorites[indexPath.row]
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! SettingsCollectionViewCell
-        
-        cell.favoritesLabel.text = favorite.title
-        
+        cell.setup(with: favorite)
         return cell
     }
-    
-    
+
+
 }
 
 extension SettingsCustomCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let favorite = favorites[indexPath.row]
-        
+
         let selectedFavorite = favorite.action
-        
+
         selectedFavorite()
     }
 }
 
 extension SettingsCustomCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let newFavorite = "+ New Favorite"
-        let size = newFavorite.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17.0, weight: .regular)])
+        let favorite = favorites[indexPath.row].title!
+        let size = favorite.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17.0, weight: .regular)])
         return CGSize(width: size.width, height: 50.0)
     }
 }

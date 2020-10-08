@@ -26,7 +26,9 @@ class SettingsViewController: UIViewController {
     
     
     func createSettingObjects() {
-//        let collectionViewCell =
+        let collectionView = SettingsCustomCell()
+        collectionView.createFavorite()
+        let collectionViewCell = collectionView.favorites
         
         let wakeupTime = Settings(setting: "Wakeup Time", settingDetails: "What time should you wake up?", settingStatus: "7:30 AM", cellType: .label) {
             print("Let's wake up!")
@@ -84,8 +86,8 @@ class SettingsViewController: UIViewController {
             print("Audio Fusion")
         }
         
-//        let zeroSection = [collectionViewCell]
-//        settings.append(zeroSection)
+        let zeroSection = collectionViewCell
+        settings.append(zeroSection)
         
         let firstSection = [wakeupTime, sleepAlarmSettings]
         settings.append(firstSection)
