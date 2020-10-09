@@ -8,34 +8,25 @@
 
 import UIKit
 
-class SettingsCustomCell: UITableViewCell {
-    
+class FavoritesTableViewCell: UITableViewCell {
     @IBOutlet var collectionView: UICollectionView!
-    var favorites = [SettingsCollectionView]()
+    var favorites = [Favorites]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        self.collectionView.register(UINib(nibName: "SettingsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "collectionViewCell")
+        self.collectionView.register(UINib(nibName: "FavoritesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "collectionViewCell")
     }
     
-    func createFavorite() {
-        let addNewFavorite = SettingsCollectionView(title: "+ New Favorite", cellType: .collectionView) { () -> Void? in
-            let newFavorite = SettingsCollectionView(title: "User Input",  cellType: .collectionView) { () -> Void? in
-                print("User Input")
-            }
-            self.favorites.append(newFavorite)
-            self.collectionView.reloadData()
-            return ()
-        }
-
-        favorites.append(addNewFavorite)
+    func setup(with model: [Favorites]) {
+        self.favorites = model
+        self.collectionView.reloadData()
     }
     
 }
 
-extension SettingsCustomCell: UICollectionViewDataSource {
+extension FavoritesTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return favorites.count
     }
@@ -43,7 +34,7 @@ extension SettingsCustomCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let favorite = favorites[indexPath.row]
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! SettingsCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! FavoritesCollectionViewCell
         cell.setup(with: favorite)
         return cell
     }
@@ -51,7 +42,7 @@ extension SettingsCustomCell: UICollectionViewDataSource {
 
 }
 
-extension SettingsCustomCell: UICollectionViewDelegate {
+extension FavoritesTableViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let favorite = favorites[indexPath.row]
 
@@ -61,7 +52,7 @@ extension SettingsCustomCell: UICollectionViewDelegate {
     }
 }
 
-extension SettingsCustomCell: UICollectionViewDelegateFlowLayout {
+extension FavoritesTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let favorite = favorites[indexPath.row].title!
         let size = favorite.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17.0, weight: .regular)])

@@ -8,11 +8,11 @@
 
 import UIKit
 
-class SettingsCollectionViewCell: UICollectionViewCell {
+class FavoritesCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var favoritesLabel: UILabel!
     
-    func setup(with model: SettingsCollectionView) {
+    func setup(with model: Favorites) {
         favoritesLabel.text = model.title
     }
 }

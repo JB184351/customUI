@@ -26,9 +26,15 @@ class SettingsViewController: UIViewController {
     
     
     func createSettingObjects() {
-        let collectionView = SettingsCustomCell()
-        collectionView.createFavorite()
-        let collectionViewCell = collectionView.favorites
+        
+        let newFavorite = Favorites(title: "+ New Favorite", cellType: .collectionView) {
+            let addedFavorite = Favorites(title: "Newer Favorite", cellType: .collectionView) {
+                print("added")
+            }
+            
+            self.settings[0].append(addedFavorite)
+            self.tableView.reloadData()
+        }
         
         let wakeupTime = Settings(setting: "Wakeup Time", settingDetails: "What time should you wake up?", settingStatus: "7:30 AM", cellType: .label) {
             print("Let's wake up!")
@@ -86,7 +92,8 @@ class SettingsViewController: UIViewController {
             print("Audio Fusion")
         }
         
-        let zeroSection = collectionViewCell
+        
+        let zeroSection = [newFavorite]
         settings.append(zeroSection)
         
         let firstSection = [wakeupTime, sleepAlarmSettings]
@@ -107,6 +114,10 @@ extension SettingsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return 1
+        }
+        
         return settings[section].count
     }
     
@@ -123,7 +134,8 @@ extension SettingsViewController: UITableViewDataSource {
             settingsCell.setup(with: setting as! Settings)
             return settingsCell
         case .collectionView:
-            let collectionViewCell = tableView.dequeueReusableCell(withIdentifier: "favoritesCell") as! SettingsCustomCell
+            let collectionViewCell = tableView.dequeueReusableCell(withIdentifier: "favoritesCell") as! FavoritesTableViewCell
+            collectionViewCell.setup(with: settings[indexPath.section] as! [Favorites])
             return collectionViewCell
         }
     }

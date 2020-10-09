@@ -20,8 +20,8 @@ struct Settings: SettingsProtocol {
     var action: () -> Void
 }
 
-struct SettingsCollectionView: SettingsProtocol {
+struct Favorites: SettingsProtocol {
     var title: String?
     var cellType: CellType
-    var action: () -> Void?
+    var action: () -> Void
 }
