@@ -9,19 +9,18 @@
 import Foundation
 
 protocol SettingsProtocol {
-    var cellType: CellType { get set }
+    
 }
 
-struct Settings: SettingsProtocol {
+struct SleepModel: SettingsProtocol {
     var setting: String
     var settingDetails: String?
     var settingStatus: String?
-    var cellType: CellType
+    var cellType: SettingCellType
     var action: () -> Void
 }
 
-struct Favorites: SettingsProtocol {
+struct FavoritesModel: SettingsProtocol {
     var title: String?
-    var cellType: CellType
     var action: () -> Void
 }

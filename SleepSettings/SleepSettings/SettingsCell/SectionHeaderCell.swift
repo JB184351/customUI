@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomHeaderTableViewCell: UITableViewCell {
+class SectionHeaderCell: UITableViewCell {
 
     @IBOutlet var sectionHeaderLabel: UILabel!
 }

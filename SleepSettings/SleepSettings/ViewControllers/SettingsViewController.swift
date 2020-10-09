@@ -17,18 +17,18 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UINib(nibName: "SettingsCell", bundle: nil), forCellReuseIdentifier: "SettingsCell")
-        tableView.register(UINib(nibName: "CustomHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "headerCell")
+        tableView.register(UINib(nibName: "SleepSettingsCell", bundle: nil), forCellReuseIdentifier: "SettingsCell")
+        tableView.register(UINib(nibName: "SectionHeaderCell", bundle: nil), forCellReuseIdentifier: "headerCell")
         tableView.register(UINib(nibName: "SwitchSettingsCell", bundle: nil), forCellReuseIdentifier: "switchCell")
-        tableView.register(UINib(nibName: "SettingsCustomCell", bundle: nil), forCellReuseIdentifier: "favoritesCell")
+        tableView.register(UINib(nibName: "FavoritesCell", bundle: nil), forCellReuseIdentifier: "favoritesCell")
         createSettingObjects()
     }
     
     
     func createSettingObjects() {
         
-        let newFavorite = Favorites(title: "+ New Favorite", cellType: .collectionView) {
-            let addedFavorite = Favorites(title: "Newer Favorite", cellType: .collectionView) {
+        let newFavorite = FavoritesModel(title: "+ New Favorite") {
+            let addedFavorite = FavoritesModel(title: "Newer Favorite") {
                 print("added")
             }
             
@@ -36,59 +36,59 @@ class SettingsViewController: UIViewController {
             self.tableView.reloadData()
         }
         
-        let wakeupTime = Settings(setting: "Wakeup Time", settingDetails: "What time should you wake up?", settingStatus: "7:30 AM", cellType: .label) {
+        let wakeupTime = SleepModel(setting: "Wakeup Time", settingDetails: "What time should you wake up?", settingStatus: "7:30 AM", cellType: .label) {
             print("Let's wake up!")
         }
         
-        let sleepAlarmSettings = Settings(setting: "Sleep Alarm Settings", settingDetails: nil, settingStatus: "On", cellType: .label) {
+        let sleepAlarmSettings = SleepModel(setting: "Sleep Alarm Settings", settingDetails: nil, settingStatus: "On", cellType: .label) {
             print("Toggle Setting")
         }
         
-        let dreamScape = Settings(setting: "Dreamscape", settingDetails: "What music would you like to hear", settingStatus: "Random", cellType: .label) {
+        let dreamScape = SleepModel(setting: "Dreamscape", settingDetails: "What music would you like to hear", settingStatus: "Random", cellType: .label) {
             print("Toggle Dreamscape settings")
         }
         
-        let narration = Settings(setting: "Narration", settingDetails: "What narraion would you like to hear?", settingStatus: "Classic Pzizz Sleep", cellType: .label) {
+        let narration = SleepModel(setting: "Narration", settingDetails: "What narraion would you like to hear?", settingStatus: "Classic Pzizz Sleep", cellType: .label) {
             print("Change narration setings")
         }
         
-        let voice = Settings(setting: "Voice", settingDetails: "Which voice would you like to hear?", settingStatus: "Bethany", cellType: .label) {
+        let voice = SleepModel(setting: "Voice", settingDetails: "Which voice would you like to hear?", settingStatus: "Bethany", cellType: .label) {
             print("Change voice settings")
         }
         
-        let loop = Settings(setting: "Loop Narration", settingDetails: "Toggle if the narration should loop until  your voice fade out time", settingStatus: nil, cellType: .button) {
+        let loop = SleepModel(setting: "Loop Narration", settingDetails: "Toggle if the narration should loop until  your voice fade out time", settingStatus: nil, cellType: .button) {
             print("Loop Narration Action")
         }
         
-        let music = Settings(setting: "Music fade out", settingDetails: "Amount of time before music stops playing", settingStatus: "1hr 20min", cellType: .label) {
+        let music = SleepModel(setting: "Music fade out", settingDetails: "Amount of time before music stops playing", settingStatus: "1hr 20min", cellType: .label) {
             print("Fade out setings")
         }
         
-        let voiceFade = Settings(setting: "Voice Fade", settingDetails: "Amount of time before voice stops playing", settingStatus: "1hr 20min", cellType: .label) {
+        let voiceFade = SleepModel(setting: "Voice Fade", settingDetails: "Amount of time before voice stops playing", settingStatus: "1hr 20min", cellType: .label) {
             print("Voice fade out settings")
         }
         
-        let musicWakeup = Settings(setting: "Music wakeup section", settingDetails: "sequence that plays at the end of a session and gently brings you back from sleep \n Note: the wakeup section won't play for seesion less than ten minutes", settingStatus: nil, cellType: .button) {
+        let musicWakeup = SleepModel(setting: "Music wakeup section", settingDetails: "sequence that plays at the end of a session and gently brings you back from sleep \n Note: the wakeup section won't play for seesion less than ten minutes", settingStatus: nil, cellType: .button) {
             print("Music Wakeup Section")
         }
         
-        let threeDeeVoice = Settings(setting: "3D voice", settingDetails: "Enjoy an immersive surrround sound effect with the voice. Best with headphones", settingStatus: nil, cellType: .button) {
+        let threeDeeVoice = SleepModel(setting: "3D voice", settingDetails: "Enjoy an immersive surrround sound effect with the voice. Best with headphones", settingStatus: nil, cellType: .button) {
             print("3D Voice")
         }
         
-        let threeDeeVoiceSpeed = Settings(setting: "3D voice speed", settingDetails: "Amount of time it takes for hte 3D voice effect to simulate a full revolution around your head", settingStatus: "18s", cellType: .label) {
+        let threeDeeVoiceSpeed = SleepModel(setting: "3D voice speed", settingDetails: "Amount of time it takes for hte 3D voice effect to simulate a full revolution around your head", settingStatus: "18s", cellType: .label) {
             print("3D Voice Speed")
         }
         
-        let delayStart = Settings(setting: "Delay start", settingDetails: "Amount of time before session starts playing", settingStatus: "Off", cellType: .label) {
+        let delayStart = SleepModel(setting: "Delay start", settingDetails: "Amount of time before session starts playing", settingStatus: "Off", cellType: .label) {
             print("Delay start")
         }
         
-        let ratings = Settings(setting: "Ratings", settingDetails: "Rate your session after completion", settingStatus: nil, cellType: .button) {
+        let ratings = SleepModel(setting: "Ratings", settingDetails: "Rate your session after completion", settingStatus: nil, cellType: .button) {
             print("Give a rating")
         }
         
-        let audioFusion = Settings(setting: "Audio Fusion", settingDetails: "Allow Pzizz to play in the background while other audio plays", settingStatus: nil, cellType: .button) {
+        let audioFusion = SleepModel(setting: "Audio Fusion", settingDetails: "Allow Pzizz to play in the background while other audio plays", settingStatus: nil, cellType: .button) {
             print("Audio Fusion")
         }
         
@@ -122,21 +122,23 @@ extension SettingsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let setting = settings[indexPath.section][indexPath.row]
+        let setting = settings[indexPath.section][indexPath.row] as? SleepModel
         
-        switch setting.cellType {
+        if indexPath.section == 0 {
+            let collectionViewCell = tableView.dequeueReusableCell(withIdentifier: "favoritesCell") as! FavoritesTableViewCell
+            collectionViewCell.setup(with: settings[indexPath.section] as! [FavoritesModel])
+            return collectionViewCell
+        }
+        
+        switch setting!.cellType {
         case .button:
             let buttonTypeCell = tableView.dequeueReusableCell(withIdentifier: "switchCell", for: indexPath) as! SwitchSettingsCell
-            buttonTypeCell.setup(with: setting as! Settings)
+            buttonTypeCell.setup(with: setting!)
             return buttonTypeCell
         case .label:
-            let settingsCell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath) as! SettingsCell
-            settingsCell.setup(with: setting as! Settings)
+            let settingsCell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath) as! SleepSettingsCell
+            settingsCell.setup(with: setting!)
             return settingsCell
-        case .collectionView:
-            let collectionViewCell = tableView.dequeueReusableCell(withIdentifier: "favoritesCell") as! FavoritesTableViewCell
-            collectionViewCell.setup(with: settings[indexPath.section] as! [Favorites])
-            return collectionViewCell
         }
     }
     
@@ -145,7 +147,7 @@ extension SettingsViewController: UITableViewDataSource {
 extension SettingsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let setting = settings[indexPath.section][indexPath.row] as! Settings
+        let setting = settings[indexPath.section][indexPath.row] as! SleepModel
         let selectedSetting = setting.action
         selectedSetting()
     }
@@ -154,15 +156,15 @@ extension SettingsViewController: UITableViewDelegate {
         
         switch section {
         case 1:
-            let headerCell = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! CustomHeaderTableViewCell
+            let headerCell = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! SectionHeaderCell
             headerCell.sectionHeaderLabel.text = "Alarm Settings"
             return headerCell
         case 2:
-            let headerCell = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! CustomHeaderTableViewCell
+            let headerCell = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! SectionHeaderCell
             headerCell.sectionHeaderLabel.text = "Sleep Settings"
             return headerCell
         case 3:
-            let headerCell = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! CustomHeaderTableViewCell
+            let headerCell = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! SectionHeaderCell
             headerCell.sectionHeaderLabel.text = "General Settings"
             return headerCell
         default:

@@ -10,7 +10,7 @@ import UIKit
 
 class FavoritesTableViewCell: UITableViewCell {
     @IBOutlet var collectionView: UICollectionView!
-    var favorites = [Favorites]()
+    var favorites = [FavoritesModel]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,7 +19,7 @@ class FavoritesTableViewCell: UITableViewCell {
         self.collectionView.register(UINib(nibName: "FavoritesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "collectionViewCell")
     }
     
-    func setup(with model: [Favorites]) {
+    func setup(with model: [FavoritesModel]) {
         self.favorites = model
         self.collectionView.reloadData()
     }

@@ -8,8 +8,7 @@
 
 import Foundation
 
-enum CellType {
+enum SettingCellType {
     case button
     case label
-    case collectionView
 }

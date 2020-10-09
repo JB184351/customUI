@@ -12,9 +12,9 @@ class SwitchSettingsCell: UITableViewCell {
     
     @IBOutlet var settingsLabel: UILabel!
     @IBOutlet var detailSettingsLabel: UILabel!
-    @IBOutlet var settingsswitch: UISwitch!
+    @IBOutlet var settingsSwitch: UISwitch!
     
-    func setup(with model: Settings) {
+    func setup(with model: SleepModel) {
         settingsLabel.text = model.setting
         detailSettingsLabel.text = model.settingDetails
     }

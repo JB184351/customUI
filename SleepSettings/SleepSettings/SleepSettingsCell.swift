@@ -8,13 +8,13 @@
 
 import UIKit
 
-class SettingsCell: UITableViewCell {
+class SleepSettingsCell: UITableViewCell {
 
     @IBOutlet var settingsLabel: UILabel!
     @IBOutlet var detailSettingsLabel: UILabel!
     @IBOutlet var statusLabel: UILabel!
     
-    func setup(with model: Settings) {
+    func setup(with model: SleepModel) {
         
         settingsLabel.text = model.setting
         detailSettingsLabel.text = model.settingDetails
