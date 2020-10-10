@@ -9,8 +9,9 @@
 import UIKit
 
 class FavoritesTableViewCell: UITableViewCell {
+    // Virgil: Add new line
     @IBOutlet var collectionView: UICollectionView!
-    var favorites = [FavoritesModel]()
+    var favorites = [FavoritesModel]() // Virgil: Name it favoritesDataSource
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,6 +28,7 @@ class FavoritesTableViewCell: UITableViewCell {
 }
 
 extension FavoritesTableViewCell: UICollectionViewDataSource {
+    // Virgil: Add new line
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return favorites.count
     }
@@ -38,24 +40,29 @@ extension FavoritesTableViewCell: UICollectionViewDataSource {
         cell.setup(with: favorite)
         return cell
     }
-
+// Virgil: Remove extra new line
 
 }
 
 extension FavoritesTableViewCell: UICollectionViewDelegate {
+    // Virgil: Add new line
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // Virgil: No need to have these 3 lines so spaced out
         let favorite = favorites[indexPath.row]
 
         let selectedFavorite = favorite.action
 
         selectedFavorite()
     }
+    // Virgil: Add new line
 }
 
 extension FavoritesTableViewCell: UICollectionViewDelegateFlowLayout {
+    // Virgil: Add new line
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let favorite = favorites[indexPath.row].title!
         let size = favorite.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17.0, weight: .regular)])
         return CGSize(width: size.width, height: 50.0)
     }
+    // Virgil: Add new line
 }

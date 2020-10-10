@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Virgil: You can move this enum in the same file with the SleepModel
 enum SettingCellType {
     case button
     case label

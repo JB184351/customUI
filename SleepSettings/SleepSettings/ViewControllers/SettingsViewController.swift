@@ -11,7 +11,7 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
-    var settings = [[SettingsProtocol]]()
+    var settings = [[SettingsProtocol]]() // Virgil: Name it settingsDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,6 +105,7 @@ class SettingsViewController: UIViewController {
         let thirdSection = [ratings, audioFusion]
         settings.append(thirdSection)
     }
+    // Virgil: Add new line
 }
 
 extension SettingsViewController: UITableViewDataSource {
@@ -153,7 +154,7 @@ extension SettingsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
+        // Virgil: Remove extra new line
         switch section {
         case 1:
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! SectionHeaderCell
@@ -184,4 +185,5 @@ extension SettingsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    // Virgil: Add new line
 }
