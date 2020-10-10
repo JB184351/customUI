@@ -8,16 +8,13 @@
 
 import UIKit
 
-// Virgil: Why this cell is called only Cell when you have FavoritesTableViewCell?
-// Be consistent in the naming scheme you adapt
-// Either it's <name>Cell or <name>TableViewCell
-class SwitchSettingsCell: UITableViewCell {
+class SwitchSettingsTableViewCell: UITableViewCell {
     
     @IBOutlet var settingsLabel: UILabel!
     @IBOutlet var detailSettingsLabel: UILabel!
     @IBOutlet var settingsSwitch: UISwitch!
     
-    func setup(with model: SleepModel) {
+    func setup(with model: SettingsModel) {
         settingsLabel.text = model.setting
         detailSettingsLabel.text = model.settingDetails
     }

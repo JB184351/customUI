@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3085491725119FA000D667B6 /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085491525119FA000D667B6 /* SectionHeaderCell.swift */; };
-		3085491825119FA000D667B6 /* SectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3085491625119FA000D667B6 /* SectionHeaderCell.xib */; };
+		3085491725119FA000D667B6 /* SectionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085491525119FA000D667B6 /* SectionHeaderTableViewCell.swift */; };
+		3085491825119FA000D667B6 /* SectionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3085491625119FA000D667B6 /* SectionHeaderTableViewCell.xib */; };
+		308906972532288700F5A643 /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308906962532288700F5A643 /* SettingsProtocol.swift */; };
+		3089069B253228CE00F5A643 /* SettingsFavoritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3089069A253228CE00F5A643 /* SettingsFavoritesModel.swift */; };
 		30B596732524C721000C0EA5 /* FavoritesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B596712524C721000C0EA5 /* FavoritesCollectionViewCell.swift */; };
 		30B596742524C721000C0EA5 /* FavoritesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B596722524C721000C0EA5 /* FavoritesCollectionViewCell.xib */; };
 		30B596782524C73E000C0EA5 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B596762524C73E000C0EA5 /* FavoritesTableViewCell.swift */; };
-		30B596792524C73E000C0EA5 /* FavoritesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B596772524C73E000C0EA5 /* FavoritesCell.xib */; };
+		30B596792524C73E000C0EA5 /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B596772524C73E000C0EA5 /* FavoritesTableViewCell.xib */; };
 		30DDC1B4250D35B100E606C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDC1B3250D35B100E606C8 /* AppDelegate.swift */; };
 		30DDC1B6250D35B100E606C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDC1B5250D35B100E606C8 /* SceneDelegate.swift */; };
 		30DDC1B8250D35B100E606C8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDC1B7250D35B100E606C8 /* SettingsViewController.swift */; };
@@ -21,21 +23,22 @@
 		30DDC1C0250D35B100E606C8 /* SleepSettings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30DDC1BE250D35B100E606C8 /* SleepSettings.xcdatamodeld */; };
 		30DDC1C2250D35B300E606C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30DDC1C1250D35B300E606C8 /* Assets.xcassets */; };
 		30DDC1C5250D35B300E606C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30DDC1C3250D35B300E606C8 /* LaunchScreen.storyboard */; };
-		30DDC1CF250D36C000E606C8 /* SleepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDC1CE250D36C000E606C8 /* SleepModel.swift */; };
-		30DDC1D4250D3D2000E606C8 /* SleepSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDC1D2250D3D2000E606C8 /* SleepSettingsCell.swift */; };
-		30DDC1D5250D3D2000E606C8 /* SleepSettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DDC1D3250D3D2000E606C8 /* SleepSettingsCell.xib */; };
-		30ED4D482512FC3200D7D5DF /* SettingCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ED4D472512FC3200D7D5DF /* SettingCellType.swift */; };
-		30ED4D4B2512FE8F00D7D5DF /* SwitchSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ED4D492512FE8F00D7D5DF /* SwitchSettingsCell.swift */; };
-		30ED4D4C2512FE8F00D7D5DF /* SwitchSettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30ED4D4A2512FE8F00D7D5DF /* SwitchSettingsCell.xib */; };
+		30DDC1CF250D36C000E606C8 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDC1CE250D36C000E606C8 /* SettingsModel.swift */; };
+		30DDC1D4250D3D2000E606C8 /* SleepSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDC1D2250D3D2000E606C8 /* SleepSettingsTableViewCell.swift */; };
+		30DDC1D5250D3D2000E606C8 /* SleepSettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DDC1D3250D3D2000E606C8 /* SleepSettingsTableViewCell.xib */; };
+		30ED4D4B2512FE8F00D7D5DF /* SwitchSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ED4D492512FE8F00D7D5DF /* SwitchSettingsTableViewCell.swift */; };
+		30ED4D4C2512FE8F00D7D5DF /* SwitchSettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30ED4D4A2512FE8F00D7D5DF /* SwitchSettingsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3085491525119FA000D667B6 /* SectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
-		3085491625119FA000D667B6 /* SectionHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderCell.xib; sourceTree = "<group>"; };
+		3085491525119FA000D667B6 /* SectionHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		3085491625119FA000D667B6 /* SectionHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		308906962532288700F5A643 /* SettingsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsProtocol.swift; path = SleepSettings/SettingsProtocol.swift; sourceTree = SOURCE_ROOT; };
+		3089069A253228CE00F5A643 /* SettingsFavoritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFavoritesModel.swift; sourceTree = "<group>"; };
 		30B596712524C721000C0EA5 /* FavoritesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoritesCollectionViewCell.swift; path = SleepSettings/SettingsCell/FavoritesCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		30B596722524C721000C0EA5 /* FavoritesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FavoritesCollectionViewCell.xib; path = SleepSettings/SettingsCell/FavoritesCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
 		30B596762524C73E000C0EA5 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
-		30B596772524C73E000C0EA5 /* FavoritesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesCell.xib; sourceTree = "<group>"; };
+		30B596772524C73E000C0EA5 /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesTableViewCell.xib; sourceTree = "<group>"; };
 		30DDC1B0250D35B100E606C8 /* SleepSettings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepSettings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30DDC1B3250D35B100E606C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30DDC1B5250D35B100E606C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,12 +49,11 @@
 		30DDC1C1250D35B300E606C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30DDC1C4250D35B300E606C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30DDC1C6250D35B300E606C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30DDC1CE250D36C000E606C8 /* SleepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepModel.swift; sourceTree = "<group>"; };
-		30DDC1D2250D3D2000E606C8 /* SleepSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SleepSettingsCell.swift; path = SleepSettings/SleepSettingsCell.swift; sourceTree = SOURCE_ROOT; };
-		30DDC1D3250D3D2000E606C8 /* SleepSettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SleepSettingsCell.xib; path = SleepSettings/SleepSettingsCell.xib; sourceTree = SOURCE_ROOT; };
-		30ED4D472512FC3200D7D5DF /* SettingCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCellType.swift; sourceTree = "<group>"; };
-		30ED4D492512FE8F00D7D5DF /* SwitchSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchSettingsCell.swift; sourceTree = "<group>"; };
-		30ED4D4A2512FE8F00D7D5DF /* SwitchSettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchSettingsCell.xib; sourceTree = "<group>"; };
+		30DDC1CE250D36C000E606C8 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		30DDC1D2250D3D2000E606C8 /* SleepSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SleepSettingsTableViewCell.swift; path = SleepSettings/SleepSettingsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		30DDC1D3250D3D2000E606C8 /* SleepSettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SleepSettingsTableViewCell.xib; path = SleepSettings/SleepSettingsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		30ED4D492512FE8F00D7D5DF /* SwitchSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		30ED4D4A2512FE8F00D7D5DF /* SwitchSettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchSettingsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +112,9 @@
 		30DDC1CD250D36A000E606C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				30DDC1CE250D36C000E606C8 /* SleepModel.swift */,
-				30ED4D472512FC3200D7D5DF /* SettingCellType.swift */,
+				30DDC1CE250D36C000E606C8 /* SettingsModel.swift */,
+				3089069A253228CE00F5A643 /* SettingsFavoritesModel.swift */,
+				308906962532288700F5A643 /* SettingsProtocol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,13 +125,13 @@
 				30B596712524C721000C0EA5 /* FavoritesCollectionViewCell.swift */,
 				30B596722524C721000C0EA5 /* FavoritesCollectionViewCell.xib */,
 				30B596762524C73E000C0EA5 /* FavoritesTableViewCell.swift */,
-				30B596772524C73E000C0EA5 /* FavoritesCell.xib */,
-				30ED4D492512FE8F00D7D5DF /* SwitchSettingsCell.swift */,
-				30ED4D4A2512FE8F00D7D5DF /* SwitchSettingsCell.xib */,
-				30DDC1D2250D3D2000E606C8 /* SleepSettingsCell.swift */,
-				30DDC1D3250D3D2000E606C8 /* SleepSettingsCell.xib */,
-				3085491525119FA000D667B6 /* SectionHeaderCell.swift */,
-				3085491625119FA000D667B6 /* SectionHeaderCell.xib */,
+				30B596772524C73E000C0EA5 /* FavoritesTableViewCell.xib */,
+				30ED4D492512FE8F00D7D5DF /* SwitchSettingsTableViewCell.swift */,
+				30ED4D4A2512FE8F00D7D5DF /* SwitchSettingsTableViewCell.xib */,
+				30DDC1D2250D3D2000E606C8 /* SleepSettingsTableViewCell.swift */,
+				30DDC1D3250D3D2000E606C8 /* SleepSettingsTableViewCell.xib */,
+				3085491525119FA000D667B6 /* SectionHeaderTableViewCell.swift */,
+				3085491625119FA000D667B6 /* SectionHeaderTableViewCell.xib */,
 			);
 			path = SettingsCell;
 			sourceTree = "<group>";
@@ -191,14 +194,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3085491825119FA000D667B6 /* SectionHeaderCell.xib in Resources */,
+				3085491825119FA000D667B6 /* SectionHeaderTableViewCell.xib in Resources */,
 				30DDC1C5250D35B300E606C8 /* LaunchScreen.storyboard in Resources */,
 				30DDC1C2250D35B300E606C8 /* Assets.xcassets in Resources */,
 				30B596742524C721000C0EA5 /* FavoritesCollectionViewCell.xib in Resources */,
-				30DDC1D5250D3D2000E606C8 /* SleepSettingsCell.xib in Resources */,
-				30B596792524C73E000C0EA5 /* FavoritesCell.xib in Resources */,
+				30DDC1D5250D3D2000E606C8 /* SleepSettingsTableViewCell.xib in Resources */,
+				30B596792524C73E000C0EA5 /* FavoritesTableViewCell.xib in Resources */,
 				30DDC1BD250D35B100E606C8 /* Main.storyboard in Resources */,
-				30ED4D4C2512FE8F00D7D5DF /* SwitchSettingsCell.xib in Resources */,
+				30ED4D4C2512FE8F00D7D5DF /* SwitchSettingsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,17 +212,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30DDC1D4250D3D2000E606C8 /* SleepSettingsCell.swift in Sources */,
-				30DDC1CF250D36C000E606C8 /* SleepModel.swift in Sources */,
+				30DDC1D4250D3D2000E606C8 /* SleepSettingsTableViewCell.swift in Sources */,
+				30DDC1CF250D36C000E606C8 /* SettingsModel.swift in Sources */,
 				30DDC1BA250D35B100E606C8 /* SecondViewController.swift in Sources */,
-				30ED4D4B2512FE8F00D7D5DF /* SwitchSettingsCell.swift in Sources */,
-				30ED4D482512FC3200D7D5DF /* SettingCellType.swift in Sources */,
+				30ED4D4B2512FE8F00D7D5DF /* SwitchSettingsTableViewCell.swift in Sources */,
+				308906972532288700F5A643 /* SettingsProtocol.swift in Sources */,
 				30B596732524C721000C0EA5 /* FavoritesCollectionViewCell.swift in Sources */,
 				30DDC1B8250D35B100E606C8 /* SettingsViewController.swift in Sources */,
-				3085491725119FA000D667B6 /* SectionHeaderCell.swift in Sources */,
+				3085491725119FA000D667B6 /* SectionHeaderTableViewCell.swift in Sources */,
 				30DDC1C0250D35B100E606C8 /* SleepSettings.xcdatamodeld in Sources */,
 				30B596782524C73E000C0EA5 /* FavoritesTableViewCell.swift in Sources */,
 				30DDC1B4250D35B100E606C8 /* AppDelegate.swift in Sources */,
+				3089069B253228CE00F5A643 /* SettingsFavoritesModel.swift in Sources */,
 				30DDC1B6250D35B100E606C8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
