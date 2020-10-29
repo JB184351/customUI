@@ -30,6 +30,10 @@ class SettingsViewController: UIViewController {
     createSettingObjects()
   }
   
+  //==================================================
+  // MARK: - Populating Data Source
+  //==================================================
+  
   private func createSettingObjects() {
     
     let newFavorite = SettingsFavoritesModel(title: "+ New Favorite") {

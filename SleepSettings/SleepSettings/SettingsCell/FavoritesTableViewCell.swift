@@ -21,6 +21,10 @@ class FavoritesTableViewCell: UITableViewCell {
     self.collectionView.register(UINib(nibName: "FavoritesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "collectionViewCell")
   }
   
+  //==================================================
+  // MARK: - Setup
+  //==================================================
+  
   public func setup(with model: [SettingsFavoritesModel]) {
     self.favoritesDataSource = model
     self.collectionView.reloadData()

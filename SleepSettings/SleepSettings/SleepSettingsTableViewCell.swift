@@ -14,6 +14,10 @@ class SleepSettingsTableViewCell: UITableViewCell {
   @IBOutlet private var detailSettingsLabel: UILabel!
   @IBOutlet private var statusLabel: UILabel!
   
+  //==================================================
+  // MARK: - Setup
+  //==================================================
+  
   public func setup(with model: SettingsModel) {
     settingsLabel.text = model.setting
     detailSettingsLabel.text = model.settingDetails

@@ -13,6 +13,10 @@ class SwitchSettingsTableViewCell: UITableViewCell {
   @IBOutlet private var settingsLabel: UILabel!
   @IBOutlet private var detailSettingsLabel: UILabel!
   @IBOutlet private var settingsSwitch: UISwitch!
+    
+  //==================================================
+  // MARK: - Setup
+  //==================================================
   
   public func setup(with model: SettingsModel) {
     settingsLabel.text = model.setting
