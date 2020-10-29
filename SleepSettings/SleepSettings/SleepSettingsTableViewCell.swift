@@ -9,15 +9,15 @@
 import UIKit
 
 class SleepSettingsTableViewCell: UITableViewCell {
-
-    @IBOutlet var settingsLabel: UILabel!
-    @IBOutlet var detailSettingsLabel: UILabel!
-    @IBOutlet var statusLabel: UILabel!
-    
-    func setup(with model: SettingsModel) {
-        settingsLabel.text = model.setting
-        detailSettingsLabel.text = model.settingDetails
-        statusLabel.text = model.settingStatus! + " >"
-    }
-    
+  
+  @IBOutlet private var settingsLabel: UILabel!
+  @IBOutlet private var detailSettingsLabel: UILabel!
+  @IBOutlet private var statusLabel: UILabel!
+  
+  public func setup(with model: SettingsModel) {
+    settingsLabel.text = model.setting
+    detailSettingsLabel.text = model.settingDetails
+    statusLabel.text = model.settingStatus! + " >"
+  }
+  
 }

@@ -9,14 +9,14 @@
 import UIKit
 
 class SwitchSettingsTableViewCell: UITableViewCell {
-    
-    @IBOutlet var settingsLabel: UILabel!
-    @IBOutlet var detailSettingsLabel: UILabel!
-    @IBOutlet var settingsSwitch: UISwitch!
-    
-    func setup(with model: SettingsModel) {
-        settingsLabel.text = model.setting
-        detailSettingsLabel.text = model.settingDetails
-    }
-    
+  
+  @IBOutlet private var settingsLabel: UILabel!
+  @IBOutlet private var detailSettingsLabel: UILabel!
+  @IBOutlet private var settingsSwitch: UISwitch!
+  
+  public func setup(with model: SettingsModel) {
+    settingsLabel.text = model.setting
+    detailSettingsLabel.text = model.settingDetails
+  }
+  
 }

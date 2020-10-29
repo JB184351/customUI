@@ -67,6 +67,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		309C82EA254A61630020CC23 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				30DDC1B3250D35B100E606C8 /* AppDelegate.swift */,
+				30DDC1B5250D35B100E606C8 /* SceneDelegate.swift */,
+				30DDC1C1250D35B300E606C8 /* Assets.xcassets */,
+				30DDC1C3250D35B300E606C8 /* LaunchScreen.storyboard */,
+				30DDC1BB250D35B100E606C8 /* Main.storyboard */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
 		30DDC1A7250D35B100E606C8 = {
 			isa = PBXGroup;
 			children = (
@@ -87,11 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				30DDC1C6250D35B300E606C8 /* Info.plist */,
-				30DDC1B3250D35B100E606C8 /* AppDelegate.swift */,
-				30DDC1B5250D35B100E606C8 /* SceneDelegate.swift */,
-				30DDC1C1250D35B300E606C8 /* Assets.xcassets */,
-				30DDC1C3250D35B300E606C8 /* LaunchScreen.storyboard */,
-				30DDC1BB250D35B100E606C8 /* Main.storyboard */,
+				309C82EA254A61630020CC23 /* Support Files */,
 				30DDC1D6250D3D2B00E606C8 /* SettingsCell */,
 				30DDC1CD250D36A000E606C8 /* Model */,
 				30DDC1CC250D367E00E606C8 /* ViewControllers */,

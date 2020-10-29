@@ -9,7 +9,7 @@
 import UIKit
 
 class SectionHeaderTableViewCell: UITableViewCell {
-
-    @IBOutlet var sectionHeaderLabel: UILabel!
-    
+  
+  @IBOutlet public var sectionHeaderLabel: UILabel!
+  
 }
