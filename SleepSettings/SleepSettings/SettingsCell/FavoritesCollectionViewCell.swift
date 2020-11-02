@@ -19,4 +19,5 @@ class FavoritesCollectionViewCell: UICollectionViewCell {
   public func setup(with model: SettingsFavoritesModel) {
     favoritesLabel.text = model.title
   }
+    
 }

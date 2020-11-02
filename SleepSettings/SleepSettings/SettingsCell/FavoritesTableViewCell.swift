@@ -49,6 +49,7 @@ extension FavoritesTableViewCell: UICollectionViewDataSource {
     cell.setup(with: favorite)
     return cell
   }
+    
 }
 
 //==================================================
@@ -62,6 +63,7 @@ extension FavoritesTableViewCell: UICollectionViewDelegate {
     let selectedFavorite = favorite.action
     selectedFavorite()
   }
+    
 }
 
 //==================================================
